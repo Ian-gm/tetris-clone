@@ -277,11 +277,11 @@ while True:
                         gameOn = False
                 mouseLift = False
             if checkReset:
-                button_check.draw(screen, "QUERÉS VOLVER A EMPEZAR?", " ", (0,0,0), (255,255,255), font, font_size)
+                button_check.draw(screen, "WANT TO START OVER?", " ", (0,0,0), (255,255,255), font, font_size)
             elif checkMenu:
-                button_check.draw(screen, "QUERÉS VOLVER AL MENU?", " ", (0,0,0), (255,255,255), font, font_size)
-            button_no.draw(screen, "NO", "MALA MÍA", (50, 50, 50), (255, 255, 255), font, font_size)
-            button_yes.draw(screen, "SI", "DALE", (50, 50, 50), (255, 255, 255), font, font_size)
+                button_check.draw(screen, "BACK TO MENU?", " ", (0,0,0), (255,255,255), font, font_size)
+            button_no.draw(screen, "NO", "MY BAD", (50, 50, 50), (255, 255, 255), font, font_size)
+            button_yes.draw(screen, "SI", "PLZ", (50, 50, 50), (255, 255, 255), font, font_size)
 
 #SCOREBOARD WINDOW
     elif scoreOn:
@@ -304,8 +304,8 @@ while True:
 
         drawBackground(board)
 
-        button_gameOn.draw(screen, "START", "MANDALE PLAY", (50, 50, 50), (255, 255, 255), font, font_size)
-        button_scoreOn.draw(screen, "SCOREBOARD", "QUIÉN ES EL MÁS HUEVÓN?", (50, 50, 50), (255, 255, 255), font, font_size)
+        button_gameOn.draw(screen, "START", "LET'S GO", (50, 50, 50), (255, 255, 255), font, font_size)
+        button_scoreOn.draw(screen, "SCOREBOARD", "WHO DID BEST?", (50, 50, 50), (255, 255, 255), font, font_size)
 
 
     pygame.display.flip()
