@@ -146,7 +146,7 @@ class Scoreboard:
                         if event.key == pygame.K_RETURN:
                             pressedEnter = True
                 button_name.draw(screen, name, " ", (0, 0, 0), (255, 255, 255), font, font_size)
-                button_name.drawText(screen, 200, 90, "ESCRIME TU NOMBRE:", (255, 255, 255), font, font_size)
+                button_name.drawText(screen, 200, 90, "GIVE ME YOUR NAME:", (255, 255, 255), font, font_size)
 
             else:
                 for event in pygame.event.get():
@@ -166,8 +166,8 @@ class Scoreboard:
                         mouseLift = True
 
                 button_name.draw(screen, name," ", (0, 0, 0), (255, 255, 255), font, font_size)
-                button_name.drawText(screen, 200, 90, "SOS", (255, 255, 255), font, font_size)
-                button_name.drawText(screen, 200, 130, "ENTONCES?", (255, 255, 255), font, font_size)
+                button_name.drawText(screen, 200, 90, "YOU'RE", (255, 255, 255), font, font_size)
+                button_name.drawText(screen, 200, 130, "THEN?", (255, 255, 255), font, font_size)
 
                 if mousePressed or mouseLift:
                     if button_no.mousePress(pygame.mouse.get_pos(), mouseLift):
@@ -176,8 +176,8 @@ class Scoreboard:
                         stillWriting = False
                     mouseLift = False
 
-                button_no.draw(screen, "NO", "MALA MÍA", (50, 50, 50), (255, 255, 255), font, font_size)
-                button_yes.draw(screen, "SI", "DALE", (50, 50, 50), (255, 255, 255), font, font_size)
+                button_no.draw(screen, "NO", "MY BAD", (50, 50, 50), (255, 255, 255), font, font_size)
+                button_yes.draw(screen, "SI", "PLZ", (50, 50, 50), (255, 255, 255), font, font_size)
 
             pygame.display.flip()
 
@@ -186,9 +186,9 @@ class Scoreboard:
         if check is not None:
             previous_score = self.scoreboard[name]
             if previous_score >= score:
-                print("no superaste tu record, papu")
+                print("YOU'VE DONE BETTER")
             else:
-                print("te superaste por" + str(score - previous_score))
+                print("YOU OUTDID YOURSELF BY " + str(score - previous_score))
                 self.scoreboard.update({name: score})
                 with open(self.file, "w") as sb:
                     json.dump(self.scoreboard, sb)
